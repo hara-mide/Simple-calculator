@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <section class="text-center row mx-auto mt-5 w-100 d-flex justify-content-center align-content-center">
+        <div class="container-fluid shadow mt-lg-5 mt-3 col-lg-6 col-md-8 col-10 mx-auto my-5 rounded-5 px-lg-4 px-2 rounded-3">
+            <h1 class="text-center my-lg-4 my-3 text-primary text-capitalize text-decoration-underline fw-bolder fs-1 fst-italic">Simple arithmetic calculator</h1>
+            <div class=" container px-5 mb-3">
+                <input type="number" class="rounded-3" placeholder="Firstnumber"  id="numberOne" autofocus>
+                <input type="number" class="rounded-3" placeholder="secondnumber" id="numberTwo">
+                <input type="number" class="rounded-3" placeholder="thirdnumber"  id="numberThree">
+            </div>
+            <div class="mb-3 mx-auto">
+                <button class="btn btn-outline-success text-dark rounded-5" type="button" onclick="add()">Addition</button>
+                <button class="btn btn-outline-warning text-dark rounded-5" type="button" onclick="subtract()">Subtraction</button>
+                <button class="btn btn-outline-secondary text-dark rounded-5" type="button" onclick="Multiply()">Multiplicattion</button>
+                <button class="btn btn-outline-info text-dark rounded-5" type="button" onclick="divide()">Division</button>
+                <button class="btn btn-outline-info text-dark rounded-5" type="button" onclick="module()">Module</button>
+            </div>
+            <div class="text-center w-75 p-1 mx-auto mb-3 fs-5 fst-italic" id="showResult">Answer</div>
+        </div>
+    </section>
+</body>
+<!-- <script src="script.js"></script> -->
+    <script>
+        function add(){
+            var firstNumber = Number(numberOne.value)
+            var secondNumber = Number(numberTwo.value)
+            var thirdNumber = Number(numberThree.value)
+            var Addition = firstNumber + secondNumber + thirdNumber
+            console.log(firstNumber + '+' + secondNumber + '+' + thirdNumber);
+            console.log(Addition);
+            showResult.innerHTML = `<h5> ${firstNumber}+${secondNumber}+${thirdNumber}= ${Addition}</h5>`
+        }
+        function subtract(){
+            var firstNumber = numberOne.value
+            var secondNumber = numberTwo.value
+            var thirdNumber = numberThree.value
+            var Subtraction = firstNumber - secondNumber - thirdNumber
+            console.log(firstNumber + '-' + secondNumber + '-' + thirdNumber);
+            console.log(Subtraction);
+            showResult.innerHTML = `<h5> ${firstNumber}-${secondNumber}-${thirdNumber}= ${Subtraction}</h5>`
+        }
+        function Multiply(){
+            var firstNumber = numberOne.value
+            var secondNumber = numberTwo.value
+            var thirdNumber = numberThree.value
+            var Multiplication = firstNumber * secondNumber * thirdNumber
+            console.log(firstNumber + '*' + secondNumber + '*' + thirdNumber);
+            console.log(Multiplication);
+            showResult.innerHTML = `<h5> ${firstNumber}*${secondNumber}*${thirdNumber}= ${Multiplication}</h5>`
+        }
+        function divide(){
+            var firstNumber = numberOne.value
+            var secondNumber = numberTwo.value
+            var thirdNumber = numberThree.value
+            var Division = firstNumber / secondNumber / thirdNumber
+            console.log(firstNumber + '/' + secondNumber + '/' + thirdNumber);
+            console.log(Division);
+            showResult.innerHTML = `<h5> ${firstNumber}/${secondNumber}/${thirdNumber}= ${Division}</h5>`
+        }
+        function module(){
+            var firstNumber = numberOne.value
+            var secondNumber = numberTwo.value
+            var thirdNumber = numberThree.value
+            var Module = firstNumber % secondNumber % thirdNumber
+            console.log(firstNumber + '%' + secondNumber + '%' + thirdNumber);
+            console.log(Module);
+            showResult.innerHTML = `<h5> ${firstNumber}%${secondNumber}%${thirdNumber}= ${Module}</h5>`
+        }
+    </script>
+</html>
